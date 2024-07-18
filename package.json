@@ -12,8 +12,6 @@
     "prettier": "prettier --write \"{src,example/src,stories}/**/*.{js,css,md}\"",
     "prepublishOnly": "yarn run test && yarn run build",
     "release": "standard-version",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
     "storybook": "start-storybook -p ${PORT:-3001} -h 0.0.0.0",
     "deploy": "gh-pages -d build"
   },
@@ -33,32 +31,6 @@
     "Chris Fritz"
   ],
   "license": "MIT",
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./node_modules/jest-enzyme/lib/index.js"
-    ],
-    "setupFiles": [
-      "./test-config/shim.js",
-      "./test-config/test-setup.js"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "^dnd-core$": "dnd-core/dist/cjs",
-      "^react-dnd$": "react-dnd/dist/cjs",
-      "^react-dnd-html5-backend$": "react-dnd-html5-backend/dist/cjs",
-      "^react-dnd-touch-backend$": "react-dnd-touch-backend/dist/cjs",
-      "^react-dnd-test-backend$": "react-dnd-test-backend/dist/cjs",
-      "^react-dnd-test-utils$": "react-dnd-test-utils/dist/cjs"
-    }
-  },
   "browserslist": [
     "IE 11",
     "last 2 versions",
@@ -91,7 +63,6 @@
     "autoprefixer": "^9.7.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.4",
     "codesandbox": "~2.1.10",
     "coveralls": "^3.0.1",
@@ -105,8 +76,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "gh-pages": "^2.1.1",
-    "jest": "^24.9.0",
-    "jest-enzyme": "^7.1.2",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "react": "^16.11.0",
